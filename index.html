@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Safe Calculator - Simple and Secure</title>
+    <meta
+      name="description"
+      content="A simple, safe, and accessible calculator built with JavaScript and math.js."
+    />
+    <link rel="stylesheet" href="Calculator.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.1/math.min.js"
+      defer
+    ></script>
+    <script src="Calculator.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <section class="calculator" aria-label="Calculator">
+        <output
+          id="display"
+          class="display"
+          aria-live="polite"
+          role="textbox"
+          aria-readonly="true"
+          >0</output
+        >
+        <div class="buttons" role="group" aria-label="Calculator buttons">
+          <button type="button" aria-label="Clear All" onclick="clearDisplay()">
+            AC
+          </button>
+          <button
+            type="button"
+            aria-label="Delete last character"
+            onclick="deleteLast()"
+          >
+            ⌫
+          </button>
+          <button
+            type="button"
+            aria-label="Decimal point"
+            onclick="append('.')"
+          >
+            .
+          </button>
+          <button type="button" aria-label="Divide" onclick="append('/')">
+            /
+          </button>
+
+          <button type="button" aria-label="Seven" onclick="append('7')">
+            7
+          </button>
+          <button type="button" aria-label="Eight" onclick="append('8')">
+            8
+          </button>
+          <button type="button" aria-label="Nine" onclick="append('9')">
+            9
+          </button>
+          <button type="button" aria-label="Multiply" onclick="append('*')">
+            *
+          </button>
+
+          <button type="button" aria-label="Four" onclick="append('4')">
+            4
+          </button>
+          <button type="button" aria-label="Five" onclick="append('5')">
+            5
+          </button>
+          <button type="button" aria-label="Six" onclick="append('6')">
+            6
+          </button>
+          <button type="button" aria-label="Minus" onclick="append('-')">
+            -
+          </button>
+
+          <button type="button" aria-label="One" onclick="append('1')">
+            1
+          </button>
+          <button type="button" aria-label="Two" onclick="append('2')">
+            2
+          </button>
+          <button type="button" aria-label="Three" onclick="append('3')">
+            3
+          </button>
+          <button type="button" aria-label="Plus" onclick="append('+')">
+            +
+          </button>
+
+          <button type="button" aria-label="Zero" onclick="append('0')">
+            0
+          </button>
+          <button type="button" aria-label="Double Zero" onclick="append('00')">
+            00
+          </button>
+          <button
+            type="button"
+            aria-label="Calculate result"
+            class="equal"
+            onclick="calculate()"
+          >
+            =
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
